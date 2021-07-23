@@ -103,6 +103,54 @@ _____
 
 Life Cycle Management rule : 
 
+_______________________________________________________________________________________
+D: 23/07/2021
+
+CRR / SRR : 
+
+--> Source bucket and destination bucket must be enabled with versioning. 
+-->Existing objects will not replicate to the destination bucket.
+--> All future / subsequent uplods will replicate to destination bucket. 
+
+RTC : Replication time control : Data replicates to destination bucket with in 15 Min. (99.99% of the data) : COST US
+______
+
+Server access logging : enable logging on bucket.
+
+Cloudtrail : Data events : It allow us to log all s3 activities.
+______
+
+Transfer acceleration : 
+
+
+Regions : 
+AZs : 
+Edge location : CDN Endpoints : 
+
+https://s3-accelerate-speedtest.s3-accelerate.amazonaws.com/en/accelerate-speed-comparsion.html?region=yourbucketregioncode&origBucketName=replaceyourbucket
+
+
+
+
+
+https://join.slack.com/t/awswithavinash/shared_invite/zt-ozg7f9gx-lGdrFMlaOAc_BiPl4V~f4w
+
+https://github.com/avizway1/july730am
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
