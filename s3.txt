@@ -129,13 +129,48 @@ Edge location : CDN Endpoints :
 
 https://s3-accelerate-speedtest.s3-accelerate.amazonaws.com/en/accelerate-speed-comparsion.html?region=yourbucketregioncode&origBucketName=replaceyourbucket
 
-
-
-
-
 https://join.slack.com/t/awswithavinash/shared_invite/zt-ozg7f9gx-lGdrFMlaOAc_BiPl4V~f4w
 
 https://github.com/avizway1/july730am
+
+aws s3 sync sourcebucket destinationbucket
+
+________________________________________________________________________________________
+
+D: 24/07/2021
+
+--> In-Transit Encryption : 
+	SSL (Secure socket layer) / TLS (Transport layer secure)
+
+--> SSE (Server Side Encryption) / At-rest : 
+
+SSE-S3 : S3 platform generates and manages the key material. whoever have valid access on S3 platform can decrypt/view the data. (An encryption key that Amazon S3 creates, manages, and uses for you).
+
+SSE-KMS : 
+	KMS (AWS managed keys) (aws/s3) DMK(Default Master Key) : KMS Service generates and manages the key material. whoever have valid access on S3 platform can decrypt/view the data. We cannot delete these keys. 
+	 CMK (Customer managed keys) : KMS Service generates and manages the keymaterial.
+Along with S3 platform, the IAM user need to have valid permissions on ENCRYPTION KEY also. NO FREE TIER ELIGIBILITY.
+	SSE-C (Customer Provided Key): Customer generates and upload the key material to KMS and KMS uses this key material to encrypt/decrypt the data. CUstomer can chnage the key material at any time.
+
+
+CSE (Client Side Encryption) : Before uploading data to s3 platform, we can use our own software/applications to encrypt the data. That encryptrd data we can send to s3. AWS is not completely responsible for this mechanism.
+
+
+Encryption key generation : 
+--> Provide alias/name.
+--> CHoose type (Symmetric/asymetric) : Symmetric
+Symmetric : A single encryption key that is used for both encrypt and decrypt operations
+Asymmetric : A public and private key pair that can be used for encrypt/decrypt or sign/verify operations
+
+--> key administrative permissions : Who can administrate this key. : Avinash_T
+--> key usage permissions : Who can use this key to decrypt the data : Avinash_T
+
+KMS Key s, we cannot delete immedeatly. We need to schedule key deletion (Min: 7 Days, Max: 31 Days)
+
+
+
+
+
 
 
 
