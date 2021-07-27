@@ -233,6 +233,94 @@ index.html
 <h1> THis is my s3 static website </h1>
 </html>
 
+________________________________________________________________________________________
+
+D: 27/07/2021
+
+IAMUser-1 : S3FullAccess : Okay to have full access on all resources.
+IAMUser-2 : S3FullAccess : Restrict this user to Delete "avinash.bucket" and restrict "PUT" on "avinash.bucket".
+
+Effect : ALLOW / DENY : DENY
+
+Principal : For what user/group you want to allow/deny : arn:aws:iam::501170964283:user/user2
+
+Actions : Operations : DeleteBucket , PutObject
+
+Resource arn : on what bucket you want to apply : arn:aws:s3:::avinash.bucket
+
+URL : https://awspolicygen.s3.amazonaws.com/policygen.html
+
+Bucket Level : arn:aws:s3:::avinash.bucket
+Object level : arn:aws:s3:::avinash.bucket/*
+
+____________________
+
+Cloudwatch : Monitoring service. We can create alarms, Graphs based on resource metrics. 
+
+Storage Class Analysis : Analyze storage access patterns to help you decide when to transition objects to the appropriate storage class.
+
+Inventory configurations : We will get all the objects list with properties.
+
+____________________
+
+CORS Configuration : 
+https://docs.aws.amazon.com/AmazonS3/latest/userguide/enabling-cors-examples.html
+
+Access control list (ACL) : Grant basic read/write permissions to other AWS accounts.
+
+_______
+
+Performance : 
+
+--> Increase the randomness in object names.
+--> Use the prefixes. 
+
+--> 3500 PUT/Sec.. 5500 GET/Sec.. If we are directly storing all data in s3 platform.
+
+In S3, Perfix place imp role. /prefix we will get 3500 put & 5500 get operations.
+
+Req: 35,000 PUT.. --> Create 10 folders and upload data simumtaniously. 
+
+_______
+
+Consistancy Mechanism : 
+
+Read after write Consistency for PUT of new objects. (If we upload any object, it will be available immedeatly without any delay)
+Eventual Consistency overwrite of Put objects and Delete objects. (If any object is overwritten/deleted, at same time if any request is generated slight chances are there to get the deleted data/outdated data)
+
+__________________
+
+How to access s3 using 3rd party applications.!!
+Ans : S3 Browser, CyberDuck, WinSCP, CLoudberry explorer
+
+https://www.msp360.com/explorer/windows/amazon-s3.aspx
+
+
+Task : Try any of the s3 supported 3rd party application. 
+
+Task 2 : IAMuser should have access to only one s3 bucket. (Create an IAM policy to list all the bucket, but the iam user should work in only one bucket allocated to him).
+
+https://aws.amazon.com/premiumsupport/knowledge-center/s3-console-access-certain-bucket/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
