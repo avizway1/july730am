@@ -302,11 +302,18 @@ Task 2 : IAMuser should have access to only one s3 bucket. (Create an IAM policy
 
 https://aws.amazon.com/premiumsupport/knowledge-center/s3-console-access-certain-bucket/
 
+________________________________________________________________________________________
 
+D: 28/07/2021
 
+AWS Snow Family : 
+--> AWS snowcone : 8 TB
+--> AWS Snowball : 100 TB
+--> AWS Snowball edge : 40 - 100 TB
+--> AWS Snow mobile : PB scale container
 
-
-
+AWS Direct Connect : Dedicated connection between on-premise/local environment to AWS environment. 3-4 weeks time required. We need to choose the required bandwidth. 
+--> Airtel, jio, sify
 
 
 
