@@ -287,25 +287,45 @@ Whenever we launch an ec2 instance, 2 status checks will happen.
 Task : Launch a windows ec2 instance, make it as "Web Server", Test the "Security groups".
 
 
-__________________________________
+_______________________________________________________________________________________
 
+D: 02/08/2021
+
+EBS VOlumes : Always use EBS volumes only.
+Instance store volumes : We really don't use this in real environments.   (NO FREE TIER ELIGIBILTY)
+	--> Also called as Ephemeral storages (Temporary storage).
+	--> We cannot STOP/Start the instance.
+	--> Storage will be delivered from underlying host/physical resources.
+	--> If required, we can reboot. 
+	--> If underlying h/w failure happens we'll loss all the data.
+
+Snapshot : Backup copy of an EBS volume.
+
+SOP : Standard Operational Procedure : 
+
+DLM : Data Lifecycle manager : Automate the snapshot creation process. 
+--> We use tags to filter the resources. 
+
+Fast snapshot restore : Enable fast snapshot restore to ensure that volumes created from snapshots created by this policy instantly deliver all of their provisioned performance.
+
+--> Snapshots are point-in-time copies.
+--> Snapshots stores in S3 platform (Not in your s3).
+--> Can we view what data we have inside snapshots..?? NO
+--> Snapshot Works with Incremental backup mechanism. 
+--> If our volume is Encrypted, Snapshot also Encrypts automaticALLY. 
+--> When we are launching a volume from encrypted snapshot, volume also encrypts automatically.
+--> We cannot share an Default Master key Encrypted snapshot.
+--> If we are using Custom encryption key, we can share snapshot with another aws account, but we need to provide permissions on encryption key also to another aws account.
+
+____
 
 Tenancy in AWS : 
 --> Shared Tenancy : Underlying hardware/resources will be shared with multiple AWS customers. 
---> Dedicated Tenancy : Underlying hardware/resources will dedicatedly available to only one AWS customer. It won't shqare with any other.
+--> Dedicated Tenancy : Underlying hardware/resources will dedicatedly available to only one AWS customer. It won't share with any other.
 	--> Dedicated Instance : 
 	--> Dedicated Host : Host supports to launch multiple instances. Some applications required physical resources inforamtion to apply the licenses. 
 
 https://aws.amazon.com/ec2/dedicated-hosts/
-
-
-
-
-
-
-
-
-
 
 
 
