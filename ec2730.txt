@@ -704,6 +704,57 @@ Create a new launch configuration/template.. Associate this with ASG. Terminate 
 
 ________________________________________________________________________________________
 
+D: 10/08/2021
+
+EFS : Elastic File System (File Share) : Centralised storage. 
+--> EFS works with NFS V4.1  (Network file system)
+--> At movement it supports only Linux OS.
+--> No Pre-Provisioning required. 
+
+
+2 ec2 instance --> Both as webservers --> for web content i'll take centralised location (EFS).. 
+
+Life Cycle Management : 
+EFS-Standard : 
+EFS-IA : 
+
+
+mkdir mountpoint
+
+/var/www/html/
+
+sudo mount -t nfs4 -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2,noresvport fs-bfdede6e.efs.ap-south-1.amazonaws.com:/ /var/www/html/
+
+_____
+
+For windows we have FSx.. 
+--> Works with SMB protocol (Server Message Block).
+
+__________________________________________________________
+
+We open ec2 instance ports to Entire network IP range (10.0.0.0/8)
+
+** SG Pipe mechanism.
+
+_____________________________________________
+
+Cloudwatch : 
+Dashboard : Centrally monitor multiple resources. 
+
+
+Project X : 
+ec2, s3, elb, rds
+
+Cloudwatch events is now renamed as Amazon Events Bridge.
+
+
+Task : Stop your ec2 instance at a given time using Cloudwatch eventsbridge option. 
+
+Task 2 : Create an EFS.. and Launch multiple ec2 instance, Make it as webserver.. Mount efs to "web content path". 
+
+Task 3 : Create an Eventsbridge to take a snapshot Everymonth 10th 06:00 AM for a particular volume.
+
+https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/ScheduledEvents.html
 
 
 
