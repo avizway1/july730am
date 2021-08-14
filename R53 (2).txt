@@ -9,7 +9,6 @@ DNS Settings in our local laptops..!! (ISP) : run --> ncpa.cpl
 --> ELB DNS Name / Beanstalk Endpoint/ s3 endpoint / PublicIP : Domain Name
 
 
-
 Domain Registerer : We need to puchase a domain name. Domain name should be unique across the globe.  : Godaddy, Bigrock, google dns, AWS R53..
 
 ICANN : Domain uniqueness. 
@@ -39,3 +38,6 @@ Choose Routing policy :
 --> Failover RP
 --> GeoLocation RP
 --> MultiValue Answer RP
+
+
+
