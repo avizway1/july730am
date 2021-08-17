@@ -68,14 +68,8 @@ CIDR : Classless InterDomain Routing :
 Public Subnet : Internet facing subnet.. :
 Private Subnet : Non-Internet facing subnet.. : 
 
-_______________________________________________________________________________________
-
-D: 23/07/2021
-
-Kickstart doc:
-
-How big VPC we required.?				Ans : /16 (65531 Usable IPs)
-How many subnets we required within the VPC..?		Ans : 2 
+How big VPC we required.?				Ans : /17 (32763 Usable IPs)
+How many subnets we required within the VPC..?		Ans : 2
 How many public SUbnets required within vpc..?		Ans : 1
 How many private SUbnets required within vpc.?		Ans : 1
 Are you going to create any subnets in future.?		Ans : Yes (Have some IPs for future use).
@@ -90,12 +84,12 @@ Every region have a Default VPC. It uses Class B IP ranges (172.16.0.0 - 172.31.
 --> If we have any resources in VPC, It won;t allow us to delete it.
 
 Step 1 : Create a VPC.
-	VPC Name : CustomVPC		VPC CIDR : 192.168.0.0/16
+	VPC Name : CustomVPC		VPC CIDR : 192.168.0.0/17
 
 Step 2 : Create Subnets within CustomVPC. 
 
-Name : Public Subnet : ap-south-1a : 192.168.0.0/19
-Name : Private SUbnet : ap-south-1b : 192.168.32.0/19
+Name : Public Subnet : ap-south-1a : 192.168.0.0/28
+Name : Private SUbnet : ap-south-1b : 192.168.0.32/27
 
 Step 3 : Create an Internet Gateway and associate with CustomVPC.
 --> One VPC can contains one IGW.
@@ -115,6 +109,9 @@ Step 5 (Optional) : Navigate to Subnets, Choose "Public SUbnet", Actions, "Modif
 
 JUMP Server / Bastian Host : Is a Dedicated EC2 instance, Runs in CustomVPC PUblicSUbnet and can be used to connect to all the "Private Subnet" ec2 instances.
 
+
+___________
+
 Task : Create a VPC with 4 Subnets. (2 Public SUbnets and 2 Private Subnets)
 2 Public SUbnets (ap-south-1a, ap-south-1b)
 2 Private SUbnets (ap-south-1a, ap-south-1b)
@@ -122,10 +119,16 @@ Task : Create a VPC with 4 Subnets. (2 Public SUbnets and 2 Private Subnets)
 Task 2 : draw.io website and design this diagram.
 https://app.diagrams.net/?splash=0&libs=aws4
 
-_______________________________________________________________________________________
 
-D: 24/07/2021
 
+
+
+
+
+
+
+
+______________________----
 VPC NAT Gateway : Is designed to provide Internet to private Subnet resources. NAT always runs in custom VPCs public subnet. We need to generate an EIP (Elastic IP). 
 
 Private subnet ec2 instances want to access something from internet / endpoint hosted over the internet / patching purpose it needs internet. 
@@ -183,7 +186,6 @@ ACC ID		501170964283			501170964283
 
 ______________________________________________________________________________________
 
-D: 26/07/2021
 
 Endpoints : Private Links : It provides private connectivity to the resources. If we have any requirement, s3 rwquests/dynamodb req should not flow over the internet. 
 
