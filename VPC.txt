@@ -119,17 +119,11 @@ Task : Create a VPC with 4 Subnets. (2 Public SUbnets and 2 Private Subnets)
 Task 2 : draw.io website and design this diagram.
 https://app.diagrams.net/?splash=0&libs=aws4
 
+______________________________________________________________________________________
 
+D: 18/08/2021
 
-
-
-
-
-
-
-
-______________________----
-VPC NAT Gateway : Is designed to provide Internet to private Subnet resources. NAT always runs in custom VPCs public subnet. We need to generate an EIP (Elastic IP). 
+VPC NAT Gateway (No FREE TIER ELIGIBILITY): Is designed to provide Internet to private Subnet resources. NAT always runs in custom VPCs public subnet. We need to generate an EIP (Elastic IP). 
 
 Private subnet ec2 instances want to access something from internet / endpoint hosted over the internet / patching purpose it needs internet. 
 
@@ -139,7 +133,7 @@ ____
 
 NAT Instance : Now a days we are not using it.  It is an ec2 instance runs in custom vpcs public subnet, provides internet to private subnet resources.  (TEST IT)
 
---> We need to takes  care about the Securoty groups.
+--> We need to takes  care about the Security groups.
 --> Source/destination check must be disabled.
 
 --> Make sure your edit PrivateRoute, and add an entry with 0.0.0.0/0 via NAT Instance.
@@ -166,19 +160,20 @@ NACL : Network Access Control List : We can allow/deny traffic at Subnet level/A
 https://docs.aws.amazon.com/vpc/latest/userguide/vpc-network-acls.html
 
 --> Lowest rule number will have highest permissions. 
+________________________________________________________________________________________
 
-__________________
+D: 19/08/2021
 
 VPC Peering : Allow us to enable communication between multiple VPCs. (Same region, DIff region, Diff AWS accout VPCs)
 
 --> Requester VPC and Accepter VPC should not have same CIDR range.
 --> VPC Peering is non transitive peering. 
---> Updaqte both the VPCs route tables with Another VPC CIDR blocks via Peering connection. 
+--> Update both the VPCs route tables with Another VPC CIDR blocks via Peering connection. 
 
 		Requester VPC			Accepeter VPC
-VPC CIDR	192.168.0.0/16			172.31.0.0/16
-VPC ID		vpc-095cd9ef045de399a		vpc-5fc95922
-Region		ap-south-1			us-east-1
+VPC CIDR	192.168.0.0/17			172.31.0.0/16
+VPC ID		vpc-0f473cce69e74566c		vpc-51dd1137
+Region		ap-south-1			ap-southeast-1
 ACC ID		501170964283			501170964283
 
 
@@ -198,9 +193,6 @@ Yes..
 
 VPN COnnectivity : https://www.youtube.com/watch?v=JSTyjISscNg
 Transit Gateway : https://www.youtube.com/watch?v=xyLlMBHy2wc
-
-
-
 
 
 
