@@ -154,6 +154,10 @@ address :
 DAX : Dynamodb accelarator : in-Memory caching solution for DynamoDB.
 
 
+_________________________________________________________________________________
+
+D: 24/08/2021
+
 Task : launch an rds mysql db instance-1.. Now export/restore the shared db... 
 
 Launch another rds mysql db instance-2.. Migrate all the datbases and tables from Db instance-1 to db instance-2 Using DMS (Database Migration service).
@@ -168,10 +172,42 @@ https://www.youtube.com/watch?v=iRhJDGp-ew8
 https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/TicTacToe.html
 
 
+Restrict any IAM user to access Specific region only. 
 
+_______________________
+"Condition": {
+    "ForAllValues:StringEquals": {
+     "aws:RequestedRegion": "ca-central-1"
+         }
+       }
 
+______________________________________________________________________________________
 
+Cloudtrail : Logging service. Enabled by default. it stores only last 90 days logs. Create a trail to s3 to store all logs for unlimited days. 
 
+• Management events provide information about management operations that are
+performed on resources in your AWS account. These are also known as control plane
+operations.
+
+• Data events provide information about the resource operations performed on or in a
+resource. These are also known as data plane operations. Data events are often high-volume activities. Data events can log s3, Dynamodb and Lambda services.
+
+• Insight Events : CloudTrail Insights events capture unusual activity in your AWS account. If you have Insights events enabled, and CloudTrail detects unusual activities.
+
+--> Cloudwatch Agent : We can install cw agent at os level, we can get custom logs of OS. 
+
+DataDog, Splunk, site24x7
+
+__________________________________
+
+Config : (Config works with Cloudtrail) : Record and evaluate configurations of your AWS resources.
+
+AWS Trusted Advisor : Based on our support plan aws provide suggestions to fix 
+--> Cost Optimization : under utilised resources
+--> Performance : Over utilized resources
+--> Security
+--> Fault Tolerance
+--> Service Limits
 
 
 
