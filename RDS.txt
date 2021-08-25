@@ -210,6 +210,32 @@ AWS Trusted Advisor : Based on our support plan aws provide suggestions to fix
 --> Service Limits
 
 
+ACM : Amazon Certificate Manager : Generate SSL/TLS certificates. 
+
+AWS Inspector : Inspector agent will perform the selected assesments to find common issues, network rechability and CIS benchmarks. 
+
+____
+
+Protect our resources from DDoS attack : AWS Shield Advanced ($3000/Month)  + ASG + CloudFront
+____
+
+WAF : Web Application Firewall : Application ELB, CLoudfront, API Gateway.. : AWS WAF is a web application firewall service that lets you monitor web requests that are forwarded to an Amazon API Gateway API, an Amazon CloudFront distribution, or an Application Load Balancer. You can protect those resources based on conditions that you specify, such as the IP addresses that the requests originate from.
+
+____________
+
+Task : Launch an ec2 instance in Mumbai region.. Migrate this ec2 instance from mumbai region to N Virginia region using "CloudEndure Migration".
+
+https://console.cloudendure.com/#/register/register
+
+GCP to AWS : https://www.youtube.com/watch?v=8xf1RpPdcHs  (NV - Mum)
+VMWARE : https://www.youtube.com/watch?v=Vx9lRRY-shg
+
+Task 2 : Deliver website using ELB.. Generate SSL cert and configure http to https redirection.
+https://raw.githubusercontent.com/avizway/redirection/master/httptohttps
+
+Task 3 : COnfigure the Wordpress website with 3 layer. 
+
+
 
 
 
