@@ -235,6 +235,79 @@ https://raw.githubusercontent.com/avizway/redirection/master/httptohttps
 
 Task 3 : COnfigure the Wordpress website with 3 layer. 
 
+_______________________________________________________________________________________
+
+D: 26/08/2021
+
+Cloudfront : AWS CDN Service : Content Delivery Network : 
+
+Origin : S3.. ELB.. Media Service.. 
+
+OAI : origin Access identity : CLoudfront securely get the data from orgins. 
+
+TTL : 86400 Sec
+
+How to clear the cache from all the edge locations..!! 
+Ans : perform invalidation.
+
+https://dvrp93x7appq2.cloudfront.net
+learnaws.co.in
+
+_______
+
+
+Lambda : Serverless architecture : Underlying infra managed by aws.
+--> Configuration (128 mb memory) 
+--> How many reqests
+--> Code run time (in Minutes)
+
+python
+go
+node.js
+.net core
+ruby
+java
+
+Canary function : Open the website and look for the given string.
+
+How to trigger lambda function periodically.? 
+Ans : Amazon EventBridge / CLoudwatch events (Previously).. rate format and cron format..
+
+Increase the function configurtions.? 
+Memory --> 128 mB, 10 GB..
+
+Add additional permissions to the lambda function.
+Navigate the ROle associate to the lambda, add required permissions. 
+
+Where we get all the logs / previous executed results.
+CLoudwatch logs.. Loggroups.. 
+
+Can we run lambda with in VPC.? If yes, how..??
+Lambda's Role must have "AWSLambdaVPCAccessExecutionRole" permissions.
+
+
+Python : https://www.youtube.com/watch?v=YYXdXT2l-Gg&list=PL-osiE80TeTt2d9bfVyTiXJA-UTHn6WwU
+https://www.youtube.com/watch?v=rfscVS0vtbw
+
+AWS Python DOcumentation : https://boto3.amazonaws.com/v1/documentation/api/latest/guide/quickstart.html
+
+_______
+
+Task : Try the lambda functions i have shared.
+
+_____________________________________________________________________________
+
+
+Cloudformation : IaC (Infrastructure as Code) : 
+--> Free.. But for the resources it creates. 
+--> Supports JSON & YAML
+
+https://egghead.io/courses/learn-aws-lambda-from-scratch-d29d
+https://www.w3schools.com/js/js_json_intro.asp
+
+https://www.youtube.com/watch?v=yDp6pGwasMo&list=PLneBjIzDLECmpOYF5y51fOsBRqPkuX3NH
+
+
 
 
 
