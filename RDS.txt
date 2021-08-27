@@ -295,8 +295,11 @@ _______
 
 Task : Try the lambda functions i have shared.
 
+https://www.youtube.com/watch?v=8gfSS-ZIulQ
+
 _____________________________________________________________________________
 
+D: 27/08/2021
 
 Cloudformation : IaC (Infrastructure as Code) : 
 --> Free.. But for the resources it creates. 
@@ -307,6 +310,46 @@ https://www.w3schools.com/js/js_json_intro.asp
 
 https://www.youtube.com/watch?v=yDp6pGwasMo&list=PLneBjIzDLECmpOYF5y51fOsBRqPkuX3NH
 
+_______________________________________________________________________________________
+
+
+cloud9 : IDE within AWS environment.
+
+AWS CDK : 
+node --version
+
+npm install -g aws-cdk
+
+cdk --version
+
+cdk init 		--> To initialise a project in CDK
+cdk init sample-app --language typescript
+npm run watch
+cdk synth
+cdk bootstrap
+
+ * `npm run build`   compile typescript to js
+ * `npm run watch`   watch for changes and compile
+ * `npm run test`    perform the jest unit tests
+ * `cdk deploy`      deploy this stack to your default AWS account/region
+ * `cdk diff`        compare deployed stack with current state
+ * `cdk synth`       emits the synthesized CloudFormation template
+
+AWS Console recorder : Chrome extension
+
+cdkworkshop.com
+______________________________________________________________________________________
+
+Directory Service : 
+--> Directory services with in AWS envronment : AWS Managed Microsoft AD
+--> We can extend existing AD environment to AWS with "AD Connector".
+
+Directory Service : https://www.youtube.com/watch?v=RDlBoAHVmZs
+AD Connector : https://www.youtube.com/watch?v=Ca259gg6SoM
+
+Join Linux Instance to domain : https://www.youtube.com/watch?v=LWi9-XL2vWQ
+
+______________________________________________________________________________________
 
 
 
