@@ -1,0 +1,128 @@
+
+SQS : Simple queue service : used to decouple the process. 
+--> Standard : Every msg delivers
+--> FIFO Queue : first-in-first-out : Msgs priority
+
+--> Poll/pull based msg service.
+
+Visibility timeout : 30 Sec.. Should be between 0 seconds and 12 hours.
+
+Message retention period : 4 days.. Should be between 1 minute and 14 days.
+
+Delivery delay : 0.. Max: 15 Min
+
+Maximum message size: 256 kb  (chunks... 1 chunk = 64 kb) = 1 million req/free
+
+msg size : 150 kb = 3 requests
+
+Dead-letter queue : Send undeliverable messages to a dead-letter queue.
+______________________________________
+
+SNS : simple notifications service : 
+--> Push Based
+--> email, sms
+--> push notifications : 
+
+____________________
+
+SES : Simple Email Services : 
+
+
+_______________________________________________________________________________________
+
+
+
+AWS Organisations : Manage multiple AWS accounts.. 
+--> SCP : Service control policy : Service control policies (SCPs) enable central administration over the permissions available within the accounts in your organization. This helps ensure that your accounts stay within your organization’s access control guidelines.
+
+OrganizationAccountAccessRole
+
+root / master --> Enable Org
+
+AWS SSO : Place to manage login (users/groups) to multiple Accounts added into AWS rganisation.
+
+--> Permission set : 
+
+
+AWS Pricing Calculator: 
+
+https://calculator.s3.amazonaws.com/index.html
+https://calculator.aws/#/
+
+
+__________________________________________________________________
+
+https://aws.amazon.com/getting-started/hands-on/amazon-ebs-backup-and-restore-using-aws-backup/?trk=gs_card
+
+https://aws.amazon.com/getting-started/hands-on/launch-load-balanced-wordpress-website/
+
+https://aws.amazon.com/getting-started/hands-on/create-nosql-table/
+
+https://aws.amazon.com/getting-started/hands-on/launch-a-wordpress-website/?trk=gs_card
+
+https://aws.amazon.com/getting-started/hands-on/amazon-efs-backup-and-restore-using-aws-backup/?trk=gs_card
+
+https://aws.amazon.com/getting-started/hands-on/migrate-rdsmysql-to-auroramysql/?trk=gs_card
+
+____________________________________________________________________
+
+3 Days: 
+
+Jenkins : https://www.udemy.com/course/jenkinswithavinash/?couponCode=AUG021
+
+Linux : https://www.udemy.com/course/linuxwithavinash/?couponCode=AUG021
+
+GIT : https://www.youtube.com/watch?v=rtI26X6FJX0&list=PLneBjIzDLECkdgoinrTO7D519zgPEmcte
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
