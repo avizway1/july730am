@@ -74,11 +74,37 @@ Linux : https://www.udemy.com/course/linuxwithavinash/?couponCode=AUG021
 
 GIT : https://www.youtube.com/watch?v=rtI26X6FJX0&list=PLneBjIzDLECkdgoinrTO7D519zgPEmcte
 
+______________________________________________
+
+D: 31/08/2021
+
+AWS Pricing Calc : https://calculator.aws/#/
+
+Shared Security Model : 
+Security OF the cloud : AWS Responsibility
+Security IN the Cloud : Customer Respon
+
+https://aws.amazon.com/whitepapers/
+
+Storage Gateway : Enable hybdrid environment : https://www.youtube.com/watch?v=wmcBSHpoHhs
 
 
+VMware to AWS : https://www.youtube.com/watch?v=Vx9lRRY-shg
+Azure to AWS : https://www.youtube.com/watch?v=bdaHMRqCBkg
+GCP to AWS : https://www.youtube.com/watch?v=8xf1RpPdcHs
+
+Ad : https://www.youtube.com/watch?v=RDlBoAHVmZs
+AD connector : https://www.youtube.com/watch?v=Ca259gg6SoM
+Join linux to AD : https://www.youtube.com/watch?v=LWi9-XL2vWQ
 
 
+Cross account access : https://www.youtube.com/watch?v=sZiiB4yF0VY
+Custom Policy : https://www.youtube.com/watch?v=o6WpjD3JqH8
 
+Global Accelerator : https://www.youtube.com/watch?v=ELEW3R5vgCA
+
+Transit Gateway : https://www.youtube.com/watch?v=xyLlMBHy2wc
+VPN : https://www.youtube.com/watch?v=JSTyjISscNg
 
 
 
